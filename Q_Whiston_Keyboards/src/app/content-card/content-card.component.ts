@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content-card.component.scss']
 })
 export class ContentCardComponent implements OnInit {
-  keyboardList: ContentList
+  keyboardList: ContentList;
 
   constructor() { 
     let blackWidow: Content;
