@@ -1,0 +1,26 @@
+<div class="table-set">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Type</th>
+                <th>Image</th>
+                <th>Description</th>
+                <th>Creator</th>
+                <th>Switches</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let keyboard of keyboards;">
+                <td>{{keyboard.Id}}</td>
+                <td>{{keyboard.Title}}</td>
+                <td>{{keyboard.Type}}</td>
+                <td>{{keyboard.Image}}</td>
+                <td>{{keyboard.Description}}</td>
+                <td>{{keyboard.Creator}}</td>
+                <td>{{keyboard.Switches}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
