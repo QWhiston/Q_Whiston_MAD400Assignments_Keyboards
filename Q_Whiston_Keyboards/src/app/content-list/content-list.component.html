@@ -12,14 +12,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor = "let keyboard of keyboards;">
-                <td>{{keyboard.Id}}</td>
-                <td>{{keyboard.Title}}</td>
-                <td>{{keyboard.Type}}</td>
-                <td>{{keyboard.Image}}</td>
-                <td>{{keyboard.Description}}</td>
-                <td>{{keyboard.Creator}}</td>
-                <td>{{keyboard.Switches}}</td>
+            <tr *ngFor = "let keyboard of keyboards; index as i; first as isFirst">
+                <td>{{keyboard.id}}</td>
+                <td><header>{{keyboard.title}}</header></td>
+                <td>{{keyboard.type}}</td>
+                <td><img src="{{keyboard.imgURL}}"><input type="button" value="click" ng-click="Display(index)" /></td>
+                <td>{{keyboard.description}}</td>
+                <td>{{keyboard.creator}}</td>
+                <td>{{keyboard.switches}}</td>
             </tr>
         </tbody>
     </table>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 
 @Component({
@@ -8,7 +8,20 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentListComponent implements OnInit {
 
+  @Input()
+  keyboards: any;
+
+  Display(i: number){
+    console.log(this.keyboards.id[i]);
+    console.log(this.keyboards.title[i]);
+  }
+
+
   constructor() {
+
+  }
+
+  ngOnInit(): void {
     let blackWidow: Content;
     blackWidow = {
       id: 0,
@@ -75,11 +88,8 @@ export class ContentListComponent implements OnInit {
       switches: "Linear"
     }
 
-    let keyboards: Array<Content> = [blackWidow, vulcan, alloyCore, corsairK100, lightSpeed, keychron];
-   }
-
-  ngOnInit(): void {
-    
+    this.keyboards = [blackWidow, vulcan, alloyCore, corsairK100, lightSpeed, keychron];
   }
 
 }
+
