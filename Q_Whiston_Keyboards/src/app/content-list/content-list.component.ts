@@ -15,13 +15,8 @@ export class ContentListComponent implements OnInit {
     console.log(this.keyboards.id[i]);
     console.log(this.keyboards.title[i]);
   }
-
-
-  constructor() {
-
-  }
-
-  ngOnInit(): void {
+  
+  constructor() { 
     let blackWidow: Content;
     blackWidow = {
       id: 0,
@@ -106,5 +101,7 @@ export class ContentListComponent implements OnInit {
     this.keyboards = [blackWidow, vulcan, alloyCore, corsairK100, lightSpeed, keychron, apexPro];
   }
 
-}
+  ngOnInit(): void {
+  }
 
+}
