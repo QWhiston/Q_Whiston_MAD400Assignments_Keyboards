@@ -46,7 +46,7 @@ export class ContentListComponent implements OnInit {
       id: 2,
       title: "HyperX Allot Core RGB",
       type: "Membrane",
-      imgURL: "https://assets2.rockpapershotgun.com/hyperx-alloy-core-keyboard.jpg/BROK/resize/1920x1920%3E/format/jpg/quality/80/hyperx-alloy-core-keyboard.jpg",
+      imgURL: "",
       description: "A 100% keyboard with bright lights and good on the wallet",
       creator: "HyperX",
       switches: "Linear"
@@ -68,7 +68,7 @@ export class ContentListComponent implements OnInit {
       id: 4,
       title: "Logitech G915 Lightspeed",
       type: "Mechanical",
-      imgURL: "https://cdn.mos.cms.futurecdn.net/KL6ujwhaQ4qNLuKSAimc9U-970-80.jpg.webp",
+      imgURL: "",
       description: "A 100% keyboard thats wireless",
       creator: "HyperX",
       switches: "Linear",
