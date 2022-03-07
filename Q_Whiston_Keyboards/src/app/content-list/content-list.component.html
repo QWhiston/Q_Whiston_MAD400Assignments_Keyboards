@@ -1,8 +1,9 @@
-<label for="title">Input Title: </label>
+<!-- <label for="title">Input Title: </label>
 <input type="text" id="title">
 <br>
 <label>Submit</label>
-<input type="submit" value="Submit" *ngIf="keyboards.title">
+<input type="submit" value="Submit" *ngIf="keyboards.title"> -->
+<app-create-content (newKeyboardEvent)="addKeyboardToList($event)"></app-create-content>
 <app-content-card *ngFor="let item of keyboards; first as isTheFirstElement"
                   [content]="item" [class.is-first]="isTheFirstElement">
 

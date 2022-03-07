@@ -6,6 +6,7 @@ import { ContentCardComponent } from './content-card/content-card.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { TypeSetPipe } from './type-set.pipe';
 import { HoverAffectDirective } from './hover-affect.directive';
+import { CreateContentComponent } from './create-content/create-content.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { HoverAffectDirective } from './hover-affect.directive';
     ContentCardComponent,
     ContentListComponent,
     TypeSetPipe,
-    HoverAffectDirective
+    HoverAffectDirective,
+    CreateContentComponent
   ],
   imports: [
     BrowserModule

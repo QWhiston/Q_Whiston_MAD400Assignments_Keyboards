@@ -1,0 +1,40 @@
+<div class="idBox">
+    ID: <input #idBox type="number">
+</div>
+
+<div class="titleBox">
+    Title: <input #titleBox>
+</div>
+
+<div class="typeBox">
+    Type: <input #typeBox>
+</div>
+
+<div class="imgBox">
+    Image: <input #imgBox>
+</div>
+
+<div class="descriptionBox">
+    Description: <input #descriptionBox>
+</div>
+
+<div class="creatorBox">
+    Creator: <input #creatorBox>
+</div>
+
+<div class="switchesBox">
+    Switches: <input #switchesBox>
+</div>
+
+<div class="tagsBox">
+    Tags: <input #tagsBox>
+</div>
+
+<div class="submitBox">
+    <button (click)="addKeyboard(idBox.value, titleBox.value, imgBox.value, descriptionBox.value, creatorBox.value, switchesBox.value, tagsBox.value)">Add
+        Keyboard</button>
+</div>
+
+<span class="sent" *ngIf="addKeyboard">{{ titleBox.value }} was added</span>
+<!-- <br/> -->
+<!-- <span class="notSent" *ngIf="addKeyboard">The keyboard could not be added</span> -->

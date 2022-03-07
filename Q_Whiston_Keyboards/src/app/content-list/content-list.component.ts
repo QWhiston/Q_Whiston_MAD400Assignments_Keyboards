@@ -104,4 +104,11 @@ export class ContentListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addKeyboardToList(newKeyboardOnTheListSide: Content): void {
+    this.keyboards.push(newKeyboardOnTheListSide);
+    console.log("The list after pushed: ", this.keyboards);
+
+    this.keyboards = [...this.keyboards]; 
+  }
+
 }
