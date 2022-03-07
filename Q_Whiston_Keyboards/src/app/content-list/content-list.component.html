@@ -1,0 +1,12 @@
+<label for="title">Input Title: </label>
+<input type="text" id="title">
+<br>
+<label>Submit</label>
+<input type="submit" value="Submit" *ngIf="keyboards.title">
+<app-content-card *ngFor="let item of keyboards; first as isTheFirstElement"
+                  [content]="item" [class.is-first]="isTheFirstElement">
+
+                  <li ngFor="let item of keyboards | typeSet null"></li>
+                  <li ngFor="let item of keyboards | typeSet 'Mechanical'"></li>
+                  <li ngFor="let item of keyboards | typeSet 'Membrane'"></li>
+</app-content-card>
