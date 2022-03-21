@@ -12,21 +12,28 @@
       margin: 10px;
       max-width: 350px;
     }
-    .meta-data{
-      //height: 80px;
-    }
+    // .meta-data{
+    //   //height: 80px;
+    // }
     .creator,.type,.tags{
       margin: 8px 16px 8px 0;
     }
     .author-info{
       height: 24px;
     }
-    .creator{
-  
+    &.membrane{
+      background-color: rgb(85, 82, 255);
     }
-    .type{
-  
+    &.mechanical{
+      background-color: rgb(145, 61, 255);
     }
+    &.no-type{
+      background-color: rgb(51, 255, 204);
+    }
+    &.found{
+      border-color: #00ff00;
+      border-width: 5px;
+
     .tags{
       color: #fff;
       margin: 16px 0;
@@ -38,3 +45,4 @@
       margin: 0 5px 0 0;
     }
   }
+}

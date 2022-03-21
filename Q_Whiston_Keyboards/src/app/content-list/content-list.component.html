@@ -1,4 +1,4 @@
-<label for="title">Input Title: </label>
+<!-- <label for="title">Input Title: </label>
 <input type="text" id="title">
 <br>
 <label>Submit</label>
@@ -9,4 +9,27 @@
                   <li ngFor="let item of keyboards | typeSet null"></li>
                   <li ngFor="let item of keyboards | typeSet 'Mechanical'"></li>
                   <li ngFor="let item of keyboards | typeSet 'Membrane'"></li>
-</app-content-card>
+</app-content-card> -->
+
+<!--<form>-->
+    <div>
+        <input #titleSearch>
+      <button (click)="checkForTitle(titleSearch.value)">Title Check</button>
+      <div>
+        <span class="success" *ngIf="titleFound"> {{ titleSearch.value}} found!</span>
+        <span class="failure" *ngIf="titleFound === false"> {{ titleSearch.value}} not found!</span>
+      </div>
+    </div>
+    <!--</form>-->
+    
+    <!-- No type set -->
+    <app-content-card [class.found]="titleSearch.value === item.title" *ngFor="let item of (keyboards | typeSet); first as isTheFirstElement"
+                      [content]="item" [class.is-first]="isTheFirstElement" class="no-type"></app-content-card>
+    
+    <!-- Membrane type set -->
+    <app-content-card [class.found]="titleSearch.value === item.title" *ngFor="let item of (keyboards | typeSet: 'Membrane'); first as isTheFirstElement"
+                      [content]="item" [class.is-first]="isTheFirstElement" class="rookie"></app-content-card>
+    
+    <!--Mechanical type set -->
+    <app-content-card [class.found]="titleSearch.value === item.title" *ngFor="let item of (keyboards | typeSet: 'Mechanical'); first as isTheFirstElement"
+                      [content]="item" [class.is-first]="isTheFirstElement" [class]="item.type | lowercase"></app-content-card>

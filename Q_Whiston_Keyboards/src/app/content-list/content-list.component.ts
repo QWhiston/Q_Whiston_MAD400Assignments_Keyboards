@@ -7,6 +7,7 @@ import { Content } from '../helper-files/content-interface';
   styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent implements OnInit {
+  titleFound?: boolean;
 
   @Input()
   keyboards: any;
@@ -102,6 +103,24 @@ export class ContentListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  
+  checkForTitle(title: string): void{
+    if (this.keyboards.some((k: any) => k.title === title))
+    {
+      this.titleFound = true;
+    }
+    else {
+      this.titleFound = false;
+    }
+    if (this.keyboards.filter((k: any) => k.title === title).length)
+    {
+      this.titleFound = true;
+    }
+    else {
+      this.titleFound = false;
+    }
   }
 
 }
