@@ -7,6 +7,7 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { TypeSetPipe } from './type-set.pipe';
 import { HoverAffectDirective } from './hover-affect.directive';
 import { MessagesComponent } from './messages/messages.component';
+import { ModifyContentComponent } from './modify-content/modify-content.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MessagesComponent } from './messages/messages.component';
     ContentListComponent,
     TypeSetPipe,
     HoverAffectDirective,
-    MessagesComponent
+    MessagesComponent,
+    ModifyContentComponent
   ],
   imports: [
     BrowserModule
