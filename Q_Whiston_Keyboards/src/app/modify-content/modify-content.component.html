@@ -1,1 +1,30 @@
-<p>modify-content works!</p>
+<div>
+    <div>
+        Id (Only for Update): <input #id type="number">
+    </div>
+    <div>
+        Title: <input #title>
+    </div>
+    <div>
+        Img url: <input #imageUrl>
+    </div>
+    <div>
+        Description: <input #description>
+    </div>
+    <div>
+        Tags: <input #tags>
+    </div>
+    <div>
+        Creator: <input #creator>
+    </div>
+    <div>
+        Switches: <input #switches>
+    </div>
+
+</div>
+<div>
+    <button (click)="addKeyboard(id.value, title.value, imageUrl.value, description.value, tags.value, creator.value, switches.value)">Add
+        Keyboard</button>
+        <button (click)="updateKeyboard(id.value, title.value, imageUrl.value, description.value, tags.value, creator.value, switches.value)">Update
+            Keyboard</button>
+    </div>
