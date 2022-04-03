@@ -1,4 +1,4 @@
-<div>
+<mat-form-field>
     <div>
         Id (Only for Update): <input #id type="number">
     </div>
@@ -21,10 +21,14 @@
         Switches: <input #switches>
     </div>
 
-</div>
+</mat-form-field>
 <div>
-    <button (click)="addKeyboard(id.value, title.value, imageUrl.value, description.value, tags.value, creator.value, switches.value)">Add
+    <button mat-raised-button (click)="addKeyboard(title.value, imageUrl.value, description.value, tags.value, creator.value, switches.value)">Add
         Keyboard</button>
-        <button (click)="updateKeyboard(id.value, title.value, imageUrl.value, description.value, tags.value, creator.value, switches.value)">Update
-            Keyboard</button>
-    </div>
+    <button mat-raised-button (click)="updateKeyboard(id.value, title.value, imageUrl.value, description.value, tags.value, creator.value, switches.value)">Update
+        Keyboard</button>
+</div>
+
+<div>
+    <button mat-raised-button>Add New Content</button>
+</div>

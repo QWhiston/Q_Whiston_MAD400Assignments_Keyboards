@@ -17,9 +17,8 @@ export class ModifyContentComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addKeyboard(id: number, title: string, imageUrl: string, description: string, tags: string, creator: string, switches: string): void {
+  addKeyboard(title: string, imageUrl: string, description: string, tags: string, creator: string, switches: string): void {
     this.newKeyboard = {
-      id: id,
       title: title,
       imgURL: imageUrl,
       description: description,
