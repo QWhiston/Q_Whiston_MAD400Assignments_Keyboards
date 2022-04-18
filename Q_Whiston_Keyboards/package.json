@@ -1,14 +1,14 @@
 {
   "name": "q-whiston-keyboards",
-  "version": "0.0.8",
+  "version": "0.0.10",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "generatecomponent": "ng generate component",
-    "generatedirective": "ng generate directive"
+    "generatedirective": "ng generate directive",
+    "start": "http-server -p 8080 -c-1 dist/QuintanWhistonKeyboards"
   },
   "private": true,
   "dependencies": {
@@ -22,7 +22,9 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "@angular/service-worker": "~13.2.0",
     "angular-in-memory-web-api": "^0.13.0",
+    "http-server": "^14.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
